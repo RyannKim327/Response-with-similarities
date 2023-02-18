@@ -11,10 +11,10 @@ while True:
 		similar = Similarities(i.lower().replace(response.getName().lower(), response.getKeyName()))
 		similar.compare(text)
 		response.getPercent(similar.getAllResponse())
-		print("Percentage:", response.getResponse()['percentage'])
-		print(response.getKeyName())
 		if response.getResponse()['ok']:
 			print(response.getResponse()['msg'])
 			break
+	else:
+		print("I can't see any near match.")
 
 	text = input("You: ")
