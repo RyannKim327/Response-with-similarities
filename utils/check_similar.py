@@ -22,9 +22,9 @@ class Similarities:
 					for k in range(len(first[i])):
 						for l in range(len(second[j])):
 							if first[i][k].lower() == second[j][l].lower():
-								result += (len(first[i]) / len(second[j]) * 0.1)
+								result += ((len(first[i]) / len(second[j])) * 0.001)
 		
-		similar = (result / len(first)) * 100
+		similar = round(result / len(first)) * 100
 
 		self.respo.append({
 			"similar": similar,
