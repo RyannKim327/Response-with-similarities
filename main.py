@@ -1,4 +1,4 @@
-from utils.check_similar import Similarities, Reponses
+from utils.checker import Similarities, Reponses
 
 response = Reponses()
 keys = list(response.getJson().keys())

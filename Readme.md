@@ -25,4 +25,25 @@
 
 ---
 ### Tutorial
-`Soon`
+> Mostly the program uses the keywords from the python dictionary, which calls the data from the json file.
+
+### Use Response
+> Response is a class that has optional requirement parameter, which is the posibility. So the default value of the posibility is just 25 for some lower percentage of data
+
+```Python
+response = Response()
+# or
+# response = Response(50)
+# Where 50 is the 50 percent
+```
+
+> It has function names, which can be used to this project
+---
+### .setName [Response]
+> It only composed of 1 parameter, which is string
+```Python
+response = Response()
+response.setName("Bot Name")
+```
+> This is to identify the name used. It is same as the `.setYourName` for the user's name.
+
