@@ -11,7 +11,6 @@ while True:
 		similar = Similarities(i.lower().replace(response.getName().lower(), response.getKeyName()))
 		similar.compare(text)
 		response.getPercent(similar.getAllResponse())
-		print(f"Percent: {response.getResponse()['percentage']}")
 		if response.getResponse()['ok']:
 			print(response.getResponse()['msg'])
 			break

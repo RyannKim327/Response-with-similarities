@@ -9,6 +9,7 @@ class Similarities:
 		self.base = base
 	
 	def compare(self, _input: str = "", isReturn: bool = True) -> dict:
+		'''This is to compare the text and get all the possibilities'''
 		first = re.split("\s", self.base)
 		second = re.split("\s", _input)
 		result = 0
@@ -24,13 +25,14 @@ class Similarities:
 							if first[i][k].lower() == second[j][l].lower():
 								result += ((len(first[i]) / len(second[j])) * 0.001)
 		
-		similar = round(result / len(first)) * 100
+		similar = round((result / len(first)) * 100)
 
 		self.respo.append({
 			"similar": similar,
 			"base": self.base,
 			"input": _input
 		})
+
 		if isReturn:
 			return {
 				"similar": similar,
@@ -39,14 +41,18 @@ class Similarities:
 			}
 	
 	def getAllResponse(self) -> list[dict]:
+		'''Get all the responses'''
 		return self.respo
 
 class Reponses:
-	def __init__(self):
+	def __init__(self, percentage: float = 25):
+		'''This is to get all the data connected to the json file'''
 		self.data = json.loads(open("data/response.json", "r").read())
 		self.bot = "<data>"
+		self.percentage = percentage
 	
 	def getPercent(self, percents: list[dict], isResponse: bool = False) -> dict:
+		'''Get the percentage and the posibility'''
 		key = percents[0]['base']
 		percent = int(percents[0]['similar'])
 		for i in percents:
@@ -64,21 +70,27 @@ class Reponses:
 			}
 
 	def getKeyName(self) -> str:
+		'''Get the bot name'''
 		return self.bot
 
 	def setName(self, name: str):
+		'''Set the bot name'''
 		self.name = name
 
 	def getName(self) -> str:
+		'''Get your bot name'''
 		return self.name
 
 	def setYourName(self, name: str = ""):
+		'''Get your name (username)'''
 		self.yourname = name
 
 	def getJson(self) -> dict:
+		'''Get the current data exists in json'''
 		return self.data
 
 	def getResponse(self, base: str = "", auto: bool = True) -> dict:
+		'''Get the highest response'''
 		base = base.lower()
 		if self.data.get(base) == "" or self.data.get(base) == None:
 			base = self.response['base'].lower()
@@ -88,10 +100,10 @@ class Reponses:
 				return {
 					"ok": False,
 					"msg": "I don't know what is this, sorry",
-						"percentage": 0
+					"percentage": 0
 				}
 			else:
-				if float(self.response.get("similar")) < 75:
+				if float(self.response.get("similar")) < self.percentage:
 					return {
 						"ok": False,
 						"msg": "Low Possibility",
