@@ -1,6 +1,6 @@
 from utils.checker import Similarities, Reponses
 
-response = Reponses()
+response = Reponses(percentage=75)
 keys = list(response.getJson().keys())
 response.setName("Nix")
 response.setYourName("RySes")

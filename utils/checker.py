@@ -56,8 +56,8 @@ class Reponses:
 		key = percents[0]['base']
 		percent = int(percents[0]['similar'])
 		for i in percents:
-			if percent < i['similar']:
-				percent = i['similar']
+			if percent < int(i['similar']):
+				percent = int(i['similar'])
 				key = i['base']
 		self.response = {
 			"base": key,

@@ -11,7 +11,12 @@
 		"Ryann Kim Sesgundo is a student of Dalubhasaan ng Lungsod ng Lucena. He was just a freshman, and passionately doing some programming stuffs. He focuses in learning the logics, instead of mastering the syntax of different languages, so that he can do same programs in different languages. He is also an android developer for almost 5 years, and learned some fundamentals of Web Development since 2017, and learned some designing from 2018 to 2019. He is also passionate in doing backend projects such as backend server of different website like forums. He also teaches some basics and fundamentals of programming, and sharing his knowledge to some of his friends, so that, no one will left behind."
 	],
 	"about you": [
-		"I don't know how do I share more about myself, but better to ask my creator to know more."
+		"I don't know how do I share more about myself, but better to ask my creator to know more.",
+		"I am <myname>, I am just a chatbot created with Python programming.",
+		"Greetings!!!\n\tI am <myname>, a simple chatbot program, created with Python Programming under the name of MPOP Reverse II. I was designed and created by Ryann Kim Sesgundo, a first year student of Dalubhasaan ng Lungsod ng Lucena."
+	],
+	"about me":[
+		"ewan"
 	],
 	"ulol": [
 		"According to Bible, in the book of Matthew 5:22, \"Ulol\" or \"Ulol ka\" defines the worst word ever. Just read it from there, so that you may see the reason why."
