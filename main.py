@@ -20,7 +20,7 @@ while True:
 				data[i], data[j] = data[j], data[i]
 	
 	if data[len(data) - 1]['percentage'] == 0:
-		print("No data existed")
+		print("I don't know what you're talking about")
 	else:
 		print(data[len(data) - 1]['msg'])
 
