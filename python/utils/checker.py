@@ -47,7 +47,7 @@ class Similarities:
 class Reponses:
 	def __init__(self, percentage: float = 25):
 		'''This is to get all the data connected to the json file'''
-		self.data = json.loads(open("data/response.json", "r").read())
+		self.data = json.loads(open("../data/response.json", "r").read())
 		self.bot = "<data>"
 		self.percentage = percentage
 	
